@@ -9,6 +9,7 @@ import time
 from itertools import combinations
 
 
+
 def extract_calories(calories_str):
     """Extract numeric calorie value from string like '190 Calories'"""
     match = re.search(r'(\d+)', calories_str)
