@@ -1,4 +1,6 @@
 import re
+import csv
+import os
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.chrome.options import Options
@@ -6,8 +8,6 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 import time
-from itertools import combinations
-
 
 
 def extract_calories(calories_str):
@@ -18,7 +18,8 @@ def extract_calories(calories_str):
     return 0
 
 
-def get_menu_items():
+def get_menu_items(url, dining_hall_name):
+    """Get menu items from a specific dining hall URL"""
     # Setup headless Chrome
     options = Options()
     options.add_argument("--headless")
@@ -26,8 +27,8 @@ def get_menu_items():
 
     try:
         # Navigate to the page
-        url = "https://virginia.campusdish.com/LocationsAndMenus/Runk"
         driver.get(url)
+        print(f"Fetching menu items from {dining_hall_name}...")
 
         # Wait for React to render the menu items
         wait = WebDriverWait(driver, 10)
@@ -43,6 +44,10 @@ def get_menu_items():
                 calories_text = calories_element.text if calories_element else "0 Calories"
                 calories = extract_calories(calories_text)
 
+                # Skip items with 0 calories
+                if calories <= 0:
+                    continue
+
                 # Try to get description - might be collapsed/hidden
                 try:
                     description_element = item.find_element(By.CSS_SELECTOR, '[data-testid="product-card-description"]')
@@ -54,7 +59,8 @@ def get_menu_items():
                     "name": name,
                     "calories": calories,
                     "calories_text": calories_text,
-                    "description": description
+                    "description": description,
+                    "dining_hall": dining_hall_name
                 })
             except Exception as e:
                 print(f"Error processing an item: {e}")
@@ -66,73 +72,110 @@ def get_menu_items():
         driver.quit()
 
 
-def create_meal_plans(menu_items, calorie_limit):
-    """Create meal combinations that fall under the calorie limit"""
-    # Filter out items with missing or zero calories
-    valid_items = [item for item in menu_items if item['calories'] > 0]
+def save_to_csv(menu_items, filename="uva_dining_menu.csv"):
+    """Save menu items to CSV, avoiding redundancy based on item name"""
+    # Check if file exists and load existing items to avoid redundancy
+    existing_items = {}
+    if os.path.exists(filename):
+        try:
+            with open(filename, 'r', newline='', encoding='utf-8') as csvfile:
+                reader = csv.DictReader(csvfile)
+                for row in reader:
+                    # Use name as the key to check for redundancy
+                    existing_items[row['name']] = row
+        except Exception as e:
+            print(f"Error reading existing CSV: {e}")
 
-    # Sort items by calories (ascending) to make combinations more efficient
-    valid_items.sort(key=lambda x: x['calories'])
+    # Prepare to write to CSV
+    fieldnames = ['name', 'calories', 'dining_hall', 'description']
 
-    meal_plans = []
+    # Determine which items to add (non-redundant)
+    new_items = []
+    updated_items = []
+    for item in menu_items:
+        if item['name'] not in existing_items:
+            new_items.append(item)
+        else:
+            # If the item exists but from a different dining hall, update to add the new location
+            existing_item = existing_items[item['name']]
+            if existing_item['dining_hall'] != item['dining_hall']:
+                existing_item['dining_hall'] = f"{existing_item['dining_hall']}, {item['dining_hall']}"
+                updated_items.append(existing_item)
 
-    # Try combinations of 1-3 items
-    for num_items in range(1, 4):
-        for combo in combinations(valid_items, num_items):
-            total_calories = sum(item['calories'] for item in combo)
-            if total_calories <= calorie_limit:
-                meal_plans.append({
-                    'items': combo,
-                    'total_calories': total_calories
+    # If there are no new or updated items, inform the user
+    if not new_items and not updated_items:
+        print("No new menu items to add.")
+        return 0
+
+    # Combine existing (excluding updated ones), new, and updated items
+    items_to_write = []
+    for name, item in existing_items.items():
+        # Only include if not in updated_items
+        if name not in [updated['name'] for updated in updated_items]:
+            items_to_write.append(item)
+
+    items_to_write.extend(new_items)
+    items_to_write.extend(updated_items)
+
+    # Write all items to CSV
+    try:
+        with open(filename, 'w', newline='', encoding='utf-8') as csvfile:
+            writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
+            writer.writeheader()
+            for item in items_to_write:
+                # Only write the fields we care about
+                writer.writerow({
+                    'name': item['name'],
+                    'calories': item['calories'],
+                    'dining_hall': item['dining_hall'],
+                    'description': item['description']
                 })
 
-    # Sort meal plans by total calories (descending) to get the most filling options first
-    meal_plans.sort(key=lambda x: x['total_calories'], reverse=True)
-
-    # Return top 10 meal plans
-    return meal_plans[:10]
+        return len(new_items)
+    except Exception as e:
+        print(f"Error writing to CSV: {e}")
+        return 0
 
 
 def main():
-    # Fetch menu items
-    print("Fetching menu items from the dining website...")
-    menu_items = get_menu_items()
+    # Define dining hall URLs
+    dining_halls = {
+        "Runk": "https://virginia.campusdish.com/LocationsAndMenus/Runk",
+        "O-Hill": "https://virginia.campusdish.com/LocationsAndMenus/ObservatoryHillDiningRoom",
+        "Newcomb": "https://virginia.campusdish.com/en/locationsandmenus/freshfoodcompany/"
+    }
 
-    if not menu_items:
-        print("No menu items found. Please check the website or try again later.")
-        return
+    # Fetch menu items from all dining halls
+    all_menu_items = []
 
-    print(f"Found {len(menu_items)} menu items.")
-
-    # Ask for calorie limit
-    while True:
+    for hall_name, url in dining_halls.items():
         try:
-            calorie_limit = int(input("\nEnter your calorie limit for a meal: "))
-            if calorie_limit <= 0:
-                print("Please enter a positive number.")
-                continue
-            break
-        except ValueError:
-            print("Please enter a valid number.")
+            hall_items = get_menu_items(url, hall_name)
+            all_menu_items.extend(hall_items)
+            print(f"Found {len(hall_items)} menu items with calories from {hall_name}.")
+        except Exception as e:
+            print(f"Error fetching items from {hall_name}: {e}")
 
-    # Create meal plans
-    print(f"\nCreating meal plans under {calorie_limit} calories...")
-    meal_plans = create_meal_plans(menu_items, calorie_limit)
-
-    if not meal_plans:
-        print(f"No meal combinations found under {calorie_limit} calories.")
+    if not all_menu_items:
+        print("No menu items found. Please check the websites or try again later.")
         return
 
-    # Display meal plans
-    print(f"\nTop {len(meal_plans)} meal options under {calorie_limit} calories:\n")
+    print(f"Found a total of {len(all_menu_items)} menu items with calories across all dining halls.")
 
-    for i, plan in enumerate(meal_plans, 1):
-        print(f"Meal Option {i} - Total: {plan['total_calories']} calories")
-        for item in plan['items']:
-            print(f"  • {item['name']} ({item['calories_text']})")
-            if item['description'] != "No description available":
-                print(f"    {item['description']}")
-        print()
+    # Ask for filename
+    default_filename = "uva_dining_menu.csv"
+    filename = input(f"\nEnter filename for CSV (default: {default_filename}): ").strip()
+    if not filename:
+        filename = default_filename
+    if not filename.endswith('.csv'):
+        filename += '.csv'
+
+    # Save to CSV
+    print(f"Saving menu items to {filename}...")
+    new_items_count = save_to_csv(all_menu_items, filename)
+
+    print(f"CSV file updated. Added {new_items_count} new menu items.")
+    print(f"Data saved to {os.path.abspath(filename)}")
 
 
 if __name__ == "__main__":
