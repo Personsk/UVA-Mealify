@@ -2,3 +2,4 @@
 /__pycache__
 weights.txt
 meal_model.pkl
+pure_bayes_model.pkl
