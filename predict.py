@@ -1,94 +1,162 @@
 import pandas as pd
 import numpy as np
-import BayesNet as bn
+from BayesNet import MealBayesNet
+import json
 
-'''
-BayesNetVariables:
-Calories, Vegan/Vegetarian, Protein, Healthiness, Sweetness, Spiciness, Saltiness, Greasyness, Allergens (Gluten, Nut, Shellfish).
 
-UVA Dine stuff in .csv
-"Bacon, Egg & Cheese Bagel",410,Runk,"Crisp bacon, scrambled egg and American cheese on a plain bagel"
+def optimize_meal_selection(recommendations, target_calories, target_nutrients, constraints):
+    """
+    Select optimal food items from recommendations based on target calories,
+    nutrients, and dietary constraints.
 
-For each entry in CSV, sort all food items into three lists of integer vectors (later on we will use NLP to breakdown ratings/integers for the vectors, but for now just use all 1s):
-OHill
-Runk
-Newcomb
+    Args:
+        recommendations: Dict of meal type to list of recommended food items
+        target_calories: Target total calories for the day
+        target_nutrients: Dict with targets for protein, fat, carbs, etc.
+        constraints: Dict with dietary constraints (vegan, etc.)
 
-dummy user input vector
+    Returns:
+        Dict of meal type to list of selected food items
+    """
+    meal_calories = {
+        'breakfast': target_calories * 0.25,  # 25% of daily calories
+        'lunch': target_calories * 0.3,  # 30% of daily calories
+        'afternoon snack': target_calories * 0.15,  # 15% of daily calories
+        'dinner': target_calories * 0.3  # 30% of daily calories
+    }
 
-For each food item (integer vector) of each list
+    selected_meals = {}
 
-Given a dummy input vector of user preferences, calculate the difference between input vector and food item vector.
+    for meal_type, meal_recs in recommendations.items():
+        # Sort by score (highest first)
+        sorted_recs = sorted(meal_recs, key=lambda x: x['score'], reverse=True)
 
-Then, use NaiveBayesNet.predict(self, features) to predict if the item is recommended or not.
+        # Get target calories for this meal
+        target_meal_calories = meal_calories[meal_type]
 
-If it is recommended, add it to a list called: InsertDiningHallName_recommended.
+        # Select items up to the calorie target, favoring higher scores
+        selected = []
+        current_calories = 0
 
-Finally, print out which dining hall is the best (most recommended items), then print out all items recommended for that dining hall, then say "You might also like ... at ... " for the other dining halls.
-'''
+        # Start with highest rated item
+        if sorted_recs:
+            selected.append(sorted_recs[0])
+            current_calories += sorted_recs[0]['calories']
 
-NaiveBayesNet = bn
+            # Add more items if needed and possible
+            for item in sorted_recs[1:]:
+                if current_calories + item['calories'] <= target_meal_calories * 1.1:  # Allow 10% over target
+                    selected.append(item)
+                    current_calories += item['calories']
 
-# Example CSV data (replace this with loading your actual CSV data)
-data = [
-    {"Food Item": "Bacon, Egg & Cheese Bagel", "Calories": 410, "Dining Hall": "Runk", "Description": "Crisp bacon, scrambled egg and American cheese on a plain bagel"}
-]
+                if len(selected) >= 3:  # Limit to 3 items per meal
+                    break
 
-df = pd.DataFrame(data)
+        selected_meals[meal_type] = selected
 
-# Lists to store integer vectors for each dining hall
-OHill = []
-Runk = []
-Newcomb = []
+    return selected_meals
 
-# Dummy food item vectors (all 1s)
-dummy_vector = [1] * 10  # Assuming 10 variables as per BayesNetVariables
 
-# Sorting food items by dining hall
-for _, row in df.iterrows():
-    dining_hall = row["Dining Hall"]
-    if dining_hall == "OHill":
-        OHill.append(dummy_vector)
-    elif dining_hall == "Runk":
-        Runk.append(dummy_vector)
-    elif dining_hall == "Newcomb":
-        Newcomb.append(dummy_vector)
+def generate_recommendations():
+    """Generate meal recommendations for the day"""
+    # Load offerings for the day
+    offerings = pd.read_csv('offerings.csv')
 
-# Dummy user input vector (all 1s for now)
-user_input_vector = [1] * 10
+    # Print column names to debug
+    print("Available columns in offerings.csv:", offerings.columns.tolist())
 
-# Function to calculate the difference
-def calculate_difference(vector1, vector2):
-    return np.linalg.norm(np.array(vector1) - np.array(vector2))
+    # Load the trained model
+    bayes_net = MealBayesNet.load_model()
 
-# Recommendation lists
-OHill_recommended = []
-Runk_recommended = []
-Newcomb_recommended = []
+    # Generate recommendations for each meal type
+    all_recommendations = {}
 
-# Check recommendations for each dining hall
-for vector in OHill:
-    if NaiveBayesNet.predict(vector):
-        OHill_recommended.append(vector)
-for vector in Runk:
-    if NaiveBayesNet.predict(vector):
-        Runk_recommended.append(vector)
-for vector in Newcomb:
-    if NaiveBayesNet.predict(vector):
-        Newcomb_recommended.append(vector)
+    # Find the meal type column by checking possible column names
+    meal_type_col = None
+    possible_meal_cols = ['Meal type', 'Meal', 'meal', 'type', 'meal_type']
 
-# Determine the best dining hall
-recommended_counts = {
-    "OHill": len(OHill_recommended),
-    "Runk": len(Runk_recommended),
-    "Newcomb": len(Newcomb_recommended)
-}
-best_dining_hall = max(recommended_counts, key=recommended_counts.get)
+    for col in possible_meal_cols:
+        if col in offerings.columns:
+            meal_type_col = col
+            print(f"Using '{meal_type_col}' as the meal type column")
+            break
 
-# Output the results
-print(f"The best dining hall is: {best_dining_hall}")
-print(f"Recommended items for {best_dining_hall}: {eval(best_dining_hall + '_recommended')}")
+    if not meal_type_col:
+        # If no suitable column name found, use the last column
+        meal_type_col = offerings.columns[-1]
+        print(f"No standard meal type column found, using last column: '{meal_type_col}'")
 
-other_dining_halls = [hall for hall in recommended_counts.keys() if hall != best_dining_hall]
-for hall in other_dining_halls:
-    print(f"You might also like items at {hall}: {eval(hall + '_recommended')}")
+    # Get unique meal types
+    unique_meal_types = offerings[meal_type_col].unique()
+    print(f"Detected meal types: {unique_meal_types}")
+
+    # Map to standard meal types if needed
+    meal_type_mapping = {}
+    for meal in unique_meal_types:
+        lower_meal = str(meal).lower()
+        if 'breakfast' in lower_meal:
+            meal_type_mapping[meal] = 'breakfast'
+        elif 'lunch' in lower_meal:
+            meal_type_mapping[meal] = 'lunch'
+        elif 'dinner' in lower_meal:
+            meal_type_mapping[meal] = 'dinner'
+        else:
+            meal_type_mapping[meal] = meal
+
+    # Generate recommendations for each meal type
+    all_recommendations = {
+        'breakfast': bayes_net.predict(offerings, 'breakfast'),
+        'lunch': bayes_net.predict(offerings, 'lunch'),
+        'afternoon snack': bayes_net.predict(offerings, 'lunch'),  # Use lunch items for afternoon snack
+        'dinner': bayes_net.predict(offerings, 'dinner')
+    }
+
+    # Load user preferences/targets
+    with open('weights.txt', 'r') as f:
+        weights = json.load(f)
+
+    # Estimate target calories and nutrients based on weights
+    # This is a simplification; in a real system we would extract actual targets
+    target_calories = 2000  # Default target
+    target_nutrients = {
+        'protein': 75,  # Default target, g
+        'fat': 65,  # Default target, g
+        'carbs': 250  # Default target, g
+    }
+
+    # Adjust based on weights
+    calorie_weight = weights['quantitative']['calories']
+    if calorie_weight < 0.9:
+        target_calories = 1600  # Lower calorie target
+    elif calorie_weight > 1.1:
+        target_calories = 2400  # Higher calorie target
+
+    # Read dietary constraints from weights
+    constraints = {
+        'vegetarian': weights['boolean']['vegetarian'] > 1.5,
+        'vegan': weights['boolean']['vegan'] > 1.5,
+        'avoid_nuts': weights['boolean']['nuts'] < 0.5,
+        'avoid_lactose': weights['boolean']['lactose'] < 0.5,
+        'halal': weights['boolean']['halal'] > 1.5
+    }
+
+    # Optimize meal selection based on targets and constraints
+    final_recommendations = optimize_meal_selection(
+        all_recommendations,
+        target_calories,
+        target_nutrients,
+        constraints
+    )
+
+    return final_recommendations
+
+
+if __name__ == "__main__":
+    recommendations = generate_recommendations()
+
+    print("\n--- Today's Meal Recommendations ---")
+    for meal_type, items in recommendations.items():
+        print(f"\n{meal_type.upper()}:")
+        for item in items:
+            print(
+                f"- {item['name']} ({item['serving_size']} fl oz): {item['calories']} cal, {item['protein']}g protein, {item['fat']}g fat")

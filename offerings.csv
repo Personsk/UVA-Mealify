@@ -1,0 +1,46 @@
+Food item name,Serving size (fl oz),Calories,Fat (g),Protein (g),Carbs (g),Sodium (mg),Sugar (g),Vegetarian (binary),Vegan (binary),Gluten free (binary),Nuts (binary),Lactose (binary),Halal (binary),Meal
+Scrambled Eggs,4,180,12,12,2,150,1,1,0,1,0,0,1,breakfast
+Pancakes,4,220,7,6,36,350,6,1,0,0,0,1,1,breakfast
+Oatmeal (with Water),4,150,3,5,27,120,1,1,1,1,0,0,1,breakfast
+French Toast,4,250,8,9,37,380,8,0,0,0,0,1,1,breakfast
+Hash Browns,3,180,10,3,18,280,1,1,1,1,0,0,1,breakfast
+Turkey Bacon,2,120,9,9,1,320,0,0,0,1,0,0,1,breakfast
+Avocado Toast,4,200,10,5,22,220,2,1,1,0,0,0,1,breakfast
+Fruit Salad,4,80,0,1,20,10,15,1,1,1,0,0,1,breakfast
+Greek Yogurt,4,130,0,23,9,50,7,0,0,1,0,1,1,breakfast
+Breakfast Burrito,5,350,15,18,36,650,3,0,0,0,0,0,1,breakfast
+Muffin (Blueberry),4,210,7,4,34,250,16,0,0,0,0,1,1,breakfast
+Cereal (Corn Flakes),4,150,2,3,29,210,5,1,1,1,0,0,1,breakfast
+Smoothie (Mixed Fruit),6,180,2,5,35,60,25,1,1,1,0,0,1,breakfast
+Hard-Boiled Eggs,2,80,5,7,1,100,1,1,0,1,0,0,1,breakfast
+Protein Shake,4,220,3,25,26,140,5,1,0,1,0,1,1,breakfast
+Grilled Chicken Sandwich,6,450,15,32,40,900,6,0,0,0,0,0,1,lunch
+Veggie Burger,6,320,10,18,38,600,5,1,1,0,0,0,1,lunch
+Caesar Salad,4,200,14,7,10,400,2,0,0,0,0,1,1,lunch
+Tomato Soup,6,140,4,4,24,480,10,1,1,1,0,0,1,lunch
+Grilled Cheese Sandwich,4,330,15,12,36,620,4,0,0,0,0,1,1,lunch
+Roasted Vegetables,4,160,8,4,20,240,5,1,1,1,0,0,1,lunch
+BLT Sandwich,5,390,20,17,36,700,4,0,0,0,0,0,0,lunch
+Pasta Marinara,6,350,8,12,56,600,7,1,1,0,0,0,1,lunch
+Salmon Salad,5,300,14,25,15,520,3,0,0,1,0,0,1,lunch
+Hummus & Pita,4,260,10,10,32,400,2,1,1,0,0,0,1,lunch
+Chicken Caesar Wrap,5,380,16,25,32,800,3,0,0,0,0,0,1,lunch
+Lentil Soup,6,220,4,12,35,480,5,1,1,1,0,0,1,lunch
+Peanut Butter Sandwich,4,310,16,10,32,390,9,1,0,0,1,0,1,lunch
+French Fries,4,300,14,4,40,400,0,1,1,1,0,0,1,lunch
+Tuna Wrap,5,340,14,22,32,650,3,0,0,0,0,0,1,lunch
+Steak,6,500,30,40,2,600,0,0,0,1,0,0,1,dinner
+Roast Chicken,5,400,20,35,5,700,1,0,0,0,0,0,1,dinner
+Grilled Salmon,5,350,18,35,2,500,0,0,0,1,0,0,1,dinner
+Veggie Lasagna,5,320,10,15,42,550,6,1,0,0,0,1,1,dinner
+Chicken Stir-Fry,5,300,10,26,30,700,4,0,0,0,0,0,1,dinner
+Beef Tacos,5,420,18,25,40,650,4,0,0,0,0,0,1,dinner
+Vegetable Curry,5,300,12,6,42,550,5,1,1,1,0,0,1,dinner
+Rice Pilaf,4,220,4,4,38,350,1,1,1,1,0,0,1,dinner
+Shrimp Scampi,4,380,18,30,20,650,2,0,0,1,0,0,1,dinner
+Falafel Plate,4,300,12,13,38,500,4,1,1,1,0,0,1,dinner
+BBQ Pork Ribs,5,550,25,40,30,900,12,0,0,0,0,0,0,dinner
+Mashed Potatoes,4,200,8,4,28,300,2,1,0,1,0,1,1,dinner
+Garden Salad,4,120,5,4,15,180,3,1,1,1,0,0,1,dinner
+Chicken Parmesan,5,480,20,35,40,780,5,0,0,0,0,1,0,dinner
+Tofu Stir-Fry,5,280,8,18,36,520,4,1,1,0,0,0,1,dinner

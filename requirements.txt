@@ -1,0 +1,19 @@
+# PyTorch with DirectML backend for AMD GPUs on Windows
+torch-directml>=0.2.5.dev240914
+# Note, will have to change if using Windows CPU, Nvidia GPU, or other processing config
+
+# NLP & model serving
+transformers>=4.32.2
+torch>=1.10.0
+transformers>=4.18.0
+sentencepiece>=0.1.96
+protobuf>=3.19.0
+
+# Utilities
+tqdm>=4.62.0
+regex>=2021.8.3
+
+# Data handling & ML
+pandas>=1.5.3
+scikit-learn>=1.2.2
+numpy>=1.20.0

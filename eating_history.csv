@@ -1,0 +1,321 @@
+Food item name,Serving size (fl oz),Calories,Fat (g),Protein (g),Carbs (g),Sodium (mg),Sugar (g),Vegetarian (binary),Vegan (binary),Gluten free (binary),Nuts (binary),Lactose (binary),Halal (binary),Meal,day,Rating
+Scrambled Eggs,4,180,12,12,2,150,1,1,0,1,0,0,1,breakfast,1,9
+Pancakes,4,220,7,6,36,350,6,1,0,0,0,1,1,breakfast,1,8
+Turkey Bacon,2,120,9,9,1,320,0,0,0,1,0,0,1,breakfast,1,7
+Fruit Salad,4,80,0,1,20,10,15,1,1,1,0,0,1,breakfast,1,10
+Grilled Chicken Sandwich,6,450,15,32,40,900,6,0,0,0,0,0,1,lunch,1,9
+Veggie Burger,6,320,10,18,38,600,5,1,1,0,0,0,1,lunch,1,7
+Caesar Salad,4,200,14,7,10,400,2,0,0,0,0,1,1,lunch,1,8
+Pasta Marinara,6,350,8,12,56,600,7,1,1,0,0,0,1,lunch,1,6
+Steak,6,500,30,40,2,600,0,0,0,1,0,0,1,dinner,1,8
+Grilled Salmon,5,350,18,35,2,500,0,0,0,1,0,0,1,dinner,1,9
+Veggie Lasagna,5,320,10,15,42,550,6,1,0,0,0,1,1,dinner,1,7
+Chicken Stir-Fry,5,300,10,26,30,700,4,0,0,0,0,0,1,dinner,1,9
+Yogurt Parfait,4,200,2,10,30,80,20,1,0,1,0,1,1,afternoon snack,1,7
+Protein Shake,4,220,3,25,26,140,5,1,0,1,0,1,1,afternoon snack,1,8
+Granola Bar,2,180,6,4,25,150,9,1,0,0,0,0,1,afternoon snack,1,7
+Apple,1,95,0,0,25,2,19,1,1,1,0,0,1,afternoon snack,1,9
+Scrambled Eggs,4,180,12,12,2,150,1,1,0,1,0,0,1,breakfast,2,9
+Pancakes,4,220,7,6,36,350,6,1,0,0,0,1,1,breakfast,2,6
+Turkey Bacon,2,120,9,9,1,320,0,0,0,1,0,0,1,breakfast,2,8
+Fruit Salad,4,80,0,1,20,10,15,1,1,1,0,0,1,breakfast,2,9
+Grilled Chicken Sandwich,6,450,15,32,40,900,6,0,0,0,0,0,1,lunch,2,7
+Veggie Burger,6,320,10,18,38,600,5,1,1,0,0,0,1,lunch,2,8
+Caesar Salad,4,200,14,7,10,400,2,0,0,0,0,1,1,lunch,2,7
+Pasta Marinara,6,350,8,12,56,600,7,1,1,0,0,0,1,lunch,2,9
+Steak,6,500,30,40,2,600,0,0,0,1,0,0,1,dinner,2,9
+Grilled Salmon,5,350,18,35,2,500,0,0,0,1,0,0,1,dinner,2,7
+Veggie Lasagna,5,320,10,15,42,550,6,1,0,0,0,1,1,dinner,2,6
+Chicken Stir-Fry,5,300,10,26,30,700,4,0,0,0,0,0,1,dinner,2,10
+Yogurt Parfait,4,200,2,10,30,80,20,1,0,1,0,1,1,afternoon snack,2,9
+Protein Shake,4,220,3,25,26,140,5,1,0,1,0,1,1,afternoon snack,2,8
+Granola Bar,2,180,6,4,25,150,9,1,0,0,0,0,1,afternoon snack,2,7
+Apple,1,95,0,0,25,2,19,1,1,1,0,0,1,afternoon snack,2,9
+Scrambled Eggs,4,180,12,12,2,150,1,1,0,1,0,0,1,breakfast,3,10
+Pancakes,4,220,7,6,36,350,6,1,0,0,0,1,1,breakfast,3,9
+Turkey Bacon,2,120,9,9,1,320,0,0,0,1,0,0,1,breakfast,3,7
+Fruit Salad,4,80,0,1,20,10,15,1,1,1,0,0,1,breakfast,3,6
+Grilled Chicken Sandwich,6,450,15,32,40,900,6,0,0,0,0,0,1,lunch,3,9
+Veggie Burger,6,320,10,18,38,600,5,1,1,0,0,0,1,lunch,3,10
+Caesar Salad,4,200,14,7,10,400,2,0,0,0,0,1,1,lunch,3,8
+Pasta Marinara,6,350,8,12,56,600,7,1,1,0,0,0,1,lunch,3,7
+Steak,6,500,30,40,2,600,0,0,0,1,0,0,1,dinner,3,9
+Grilled Salmon,5,350,18,35,2,500,0,0,0,1,0,0,1,dinner,3,8
+Veggie Lasagna,5,320,10,15,42,550,6,1,0,0,0,1,1,dinner,3,8
+Chicken Stir-Fry,5,300,10,26,30,700,4,0,0,0,0,0,1,dinner,3,7
+Yogurt Parfait,4,200,2,10,30,80,20,1,0,1,0,1,1,afternoon snack,3,6
+Protein Shake,4,220,3,25,26,140,5,1,0,1,0,1,1,afternoon snack,3,8
+Granola Bar,2,180,6,4,25,150,9,1,0,0,0,0,1,afternoon snack,3,9
+Apple,1,95,0,0,25,2,19,1,1,1,0,0,1,afternoon snack,3,9
+Scrambled Eggs,4,180,12,12,2,150,1,1,0,1,0,0,1,breakfast,4,7
+Pancakes,4,220,7,6,36,350,6,1,0,0,0,1,1,breakfast,4,8
+Turkey Bacon,2,120,9,9,1,320,0,0,0,1,0,0,1,breakfast,4,8
+Fruit Salad,4,80,0,1,20,10,15,1,1,1,0,0,1,breakfast,4,9
+Grilled Chicken Sandwich,6,450,15,32,40,900,6,0,0,0,0,0,1,lunch,4,7
+Veggie Burger,6,320,10,18,38,600,5,1,1,0,0,0,1,lunch,4,9
+Caesar Salad,4,200,14,7,10,400,2,0,0,0,0,1,1,lunch,4,8
+Pasta Marinara,6,350,8,12,56,600,7,1,1,0,0,0,1,lunch,4,6
+Steak,6,500,30,40,2,600,0,0,0,1,0,0,1,dinner,4,7
+Grilled Salmon,5,350,18,35,2,500,0,0,0,1,0,0,1,dinner,4,8
+Veggie Lasagna,5,320,10,15,42,550,6,1,0,0,0,1,1,dinner,4,10
+Chicken Stir-Fry,5,300,10,26,30,700,4,0,0,0,0,0,1,dinner,4,6
+Yogurt Parfait,4,200,2,10,30,80,20,1,0,1,0,1,1,afternoon snack,4,8
+Protein Shake,4,220,3,25,26,140,5,1,0,1,0,1,1,afternoon snack,4,7
+Granola Bar,2,180,6,4,25,150,9,1,0,0,0,0,1,afternoon snack,4,9
+Apple,1,95,0,0,25,2,19,1,1,1,0,0,1,afternoon snack,4,10
+Scrambled Eggs,4,180,12,12,2,150,1,1,0,1,0,0,1,breakfast,5,8
+Pancakes,4,220,7,6,36,350,6,1,0,0,0,1,1,breakfast,5,7
+Turkey Bacon,2,120,9,9,1,320,0,0,0,1,0,0,1,breakfast,5,7
+Fruit Salad,4,80,0,1,20,10,15,1,1,1,0,0,1,breakfast,5,9
+Grilled Chicken Sandwich,6,450,15,32,40,900,6,0,0,0,0,0,1,lunch,5,9
+Veggie Burger,6,320,10,18,38,600,5,1,1,0,0,0,1,lunch,5,10
+Caesar Salad,4,200,14,7,10,400,2,0,0,0,0,1,1,lunch,5,8
+Pasta Marinara,6,350,8,12,56,600,7,1,1,0,0,0,1,lunch,5,6
+Steak,6,500,30,40,2,600,0,0,0,1,0,0,1,dinner,5,6
+Grilled Salmon,5,350,18,35,2,500,0,0,0,1,0,0,1,dinner,5,8
+Veggie Lasagna,5,320,10,15,42,550,6,1,0,0,0,1,1,dinner,5,10
+Chicken Stir-Fry,5,300,10,26,30,700,4,0,0,0,0,0,1,dinner,5,9
+Yogurt Parfait,4,200,2,10,30,80,20,1,0,1,0,1,1,afternoon snack,5,7
+Protein Shake,4,220,3,25,26,140,5,1,0,1,0,1,1,afternoon snack,5,8
+Granola Bar,2,180,6,4,25,150,9,1,0,0,0,0,1,afternoon snack,5,8
+Apple,1,95,0,0,25,2,19,1,1,1,0,0,1,afternoon snack,5,9
+Scrambled Eggs,4,180,12,12,2,150,1,1,0,1,0,0,1,breakfast,6,6
+Pancakes,4,220,7,6,36,350,6,1,0,0,0,1,1,breakfast,6,9
+Turkey Bacon,2,120,9,9,1,320,0,0,0,1,0,0,1,breakfast,6,7
+Fruit Salad,4,80,0,1,20,10,15,1,1,1,0,0,1,breakfast,6,10
+Grilled Chicken Sandwich,6,450,15,32,40,900,6,0,0,0,0,0,1,lunch,6,8
+Veggie Burger,6,320,10,18,38,600,5,1,1,0,0,0,1,lunch,6,7
+Caesar Salad,4,200,14,7,10,400,2,0,0,0,0,1,1,lunch,6,9
+Pasta Marinara,6,350,8,12,56,600,7,1,1,0,0,0,1,lunch,6,6
+Steak,6,500,30,40,2,600,0,0,0,1,0,0,1,dinner,6,9
+Grilled Salmon,5,350,18,35,2,500,0,0,0,1,0,0,1,dinner,6,8
+Veggie Lasagna,5,320,10,15,42,550,6,1,0,0,0,1,1,dinner,6,6
+Chicken Stir-Fry,5,300,10,26,30,700,4,0,0,0,0,0,1,dinner,6,10
+Yogurt Parfait,4,200,2,10,30,80,20,1,0,1,0,1,1,afternoon snack,6,7
+Protein Shake,4,220,3,25,26,140,5,1,0,1,0,1,1,afternoon snack,6,7
+Granola Bar,2,180,6,4,25,150,9,1,0,0,0,0,1,afternoon snack,6,8
+Apple,1,95,0,0,25,2,19,1,1,1,0,0,1,afternoon snack,6,9
+Scrambled Eggs,4,180,12,12,2,150,1,1,0,1,0,0,1,breakfast,7,8
+Pancakes,4,220,7,6,36,350,6,1,0,0,0,1,1,breakfast,7,7
+Turkey Bacon,2,120,9,9,1,320,0,0,0,1,0,0,1,breakfast,7,7
+Fruit Salad,4,80,0,1,20,10,15,1,1,1,0,0,1,breakfast,7,9
+Grilled Chicken Sandwich,6,450,15,32,40,900,6,0,0,0,0,0,1,lunch,7,10
+Veggie Burger,6,320,10,18,38,600,5,1,1,0,0,0,1,lunch,7,7
+Caesar Salad,4,200,14,7,10,400,2,0,0,0,0,1,1,lunch,7,6
+Pasta Marinara,6,350,8,12,56,600,7,1,1,0,0,0,1,lunch,7,9
+Steak,6,500,30,40,2,600,0,0,0,1,0,0,1,dinner,7,7
+Grilled Salmon,5,350,18,35,2,500,0,0,0,1,0,0,1,dinner,7,8
+Veggie Lasagna,5,320,10,15,42,550,6,1,0,0,0,1,1,dinner,7,9
+Chicken Stir-Fry,5,300,10,26,30,700,4,0,0,0,0,0,1,dinner,7,8
+Yogurt Parfait,4,200,2,10,30,80,20,1,0,1,0,1,1,afternoon snack,7,10
+Protein Shake,4,220,3,25,26,140,5,1,0,1,0,1,1,afternoon snack,7,6
+Granola Bar,2,180,6,4,25,150,9,1,0,0,0,0,1,afternoon snack,7,9
+Apple,1,95,0,0,25,2,19,1,1,1,0,0,1,afternoon snack,7,8
+Scrambled Eggs,4,180,12,12,2,150,1,1,0,1,0,0,1,breakfast,8,9
+Pancakes,4,220,7,6,36,350,6,1,0,0,0,1,1,breakfast,8,7
+Turkey Bacon,2,120,9,9,1,320,0,0,0,1,0,0,1,breakfast,8,8
+Fruit Salad,4,80,0,1,20,10,15,1,1,1,0,0,1,breakfast,8,8
+Grilled Chicken Sandwich,6,450,15,32,40,900,6,0,0,0,0,0,1,lunch,8,9
+Veggie Burger,6,320,10,18,38,600,5,1,1,0,0,0,1,lunch,8,8
+Caesar Salad,4,200,14,7,10,400,2,0,0,0,0,1,1,lunch,8,7
+Pasta Marinara,6,350,8,12,56,600,7,1,1,0,0,0,1,lunch,8,9
+Steak,6,500,30,40,2,600,0,0,0,1,0,0,1,dinner,8,8
+Grilled Salmon,5,350,18,35,2,500,0,0,0,1,0,0,1,dinner,8,9
+Veggie Lasagna,5,320,10,15,42,550,6,1,0,0,0,1,1,dinner,8,6
+Chicken Stir-Fry,5,300,10,26,30,700,4,0,0,0,0,0,1,dinner,8,7
+Yogurt Parfait,4,200,2,10,30,80,20,1,0,1,0,1,1,afternoon snack,8,9
+Protein Shake,4,220,3,25,26,140,5,1,0,1,0,1,1,afternoon snack,8,6
+Granola Bar,2,180,6,4,25,150,9,1,0,0,0,0,1,afternoon snack,8,7
+Apple,1,95,0,0,25,2,19,1,1,1,0,0,1,afternoon snack,8,8
+Scrambled Eggs,4,180,12,12,2,150,1,1,0,1,0,0,1,breakfast,9,8
+Pancakes,4,220,7,6,36,350,6,1,0,0,0,1,1,breakfast,9,7
+Turkey Bacon,2,120,9,9,1,320,0,0,0,1,0,0,1,breakfast,9,7
+Fruit Salad,4,80,0,1,20,10,15,1,1,1,0,0,1,breakfast,9,9
+Grilled Chicken Sandwich,6,450,15,32,40,900,6,0,0,0,0,0,1,lunch,9,6
+Veggie Burger,6,320,10,18,38,600,5,1,1,0,0,0,1,lunch,9,7
+Caesar Salad,4,200,14,7,10,400,2,0,0,0,0,1,1,lunch,9,8
+Pasta Marinara,6,350,8,12,56,600,7,1,1,0,0,0,1,lunch,9,9
+Steak,6,500,30,40,2,600,0,0,0,1,0,0,1,dinner,9,8
+Grilled Salmon,5,350,18,35,2,500,0,0,0,1,0,0,1,dinner,9,7
+Veggie Lasagna,5,320,10,15,42,550,6,1,0,0,0,1,1,dinner,9,9
+Chicken Stir-Fry,5,300,10,26,30,700,4,0,0,0,0,0,1,dinner,9,8
+Yogurt Parfait,4,200,2,10,30,80,20,1,0,1,0,1,1,afternoon snack,9,9
+Protein Shake,4,220,3,25,26,140,5,1,0,1,0,1,1,afternoon snack,9,8
+Granola Bar,2,180,6,4,25,150,9,1,0,0,0,0,1,afternoon snack,9,6
+Apple,1,95,0,0,25,2,19,1,1,1,0,0,1,afternoon snack,9,7
+Scrambled Eggs,4,180,12,12,2,150,1,1,0,1,0,0,1,breakfast,10,8
+Pancakes,4,220,7,6,36,350,6,1,0,0,0,1,1,breakfast,10,9
+Turkey Bacon,2,120,9,9,1,320,0,0,0,1,0,0,1,breakfast,10,6
+Fruit Salad,4,80,0,1,20,10,15,1,1,1,0,0,1,breakfast,10,7
+Grilled Chicken Sandwich,6,450,15,32,40,900,6,0,0,0,0,0,1,lunch,10,8
+Veggie Burger,6,320,10,18,38,600,5,1,1,0,0,0,1,lunch,10,9
+Caesar Salad,4,200,14,7,10,400,2,0,0,0,0,1,1,lunch,10,8
+Pasta Marinara,6,350,8,12,56,600,7,1,1,0,0,0,1,lunch,10,10
+Steak,6,500,30,40,2,600,0,0,0,1,0,0,1,dinner,10,6
+Grilled Salmon,5,350,18,35,2,500,0,0,0,1,0,0,1,dinner,10,6
+Veggie Lasagna,5,320,10,15,42,550,6,1,0,0,0,1,1,dinner,10,8
+Chicken Stir-Fry,5,300,10,26,30,700,4,0,0,0,0,0,1,dinner,10,9
+Yogurt Parfait,4,200,2,10,30,80,20,1,0,1,0,1,1,afternoon snack,10,7
+Protein Shake,4,220,3,25,26,140,5,1,0,1,0,1,1,afternoon snack,10,6
+Granola Bar,2,180,6,4,25,150,9,1,0,0,0,0,1,afternoon snack,10,7
+Apple,1,95,0,0,25,2,19,1,1,1,0,0,1,afternoon snack,10,8
+Scrambled Eggs,4,180,12,12,2,150,1,1,0,1,0,0,1,breakfast,11,10
+Pancakes,4,220,7,6,36,350,6,1,0,0,0,1,1,breakfast,11,9
+Turkey Bacon,2,120,9,9,1,320,0,0,0,1,0,0,1,breakfast,11,6
+Fruit Salad,4,80,0,1,20,10,15,1,1,1,0,0,1,breakfast,11,7
+Grilled Chicken Sandwich,6,450,15,32,40,900,6,0,0,0,0,0,1,lunch,11,8
+Veggie Burger,6,320,10,18,38,600,5,1,1,0,0,0,1,lunch,11,9
+Caesar Salad,4,200,14,7,10,400,2,0,0,0,0,1,1,lunch,11,8
+Pasta Marinara,6,350,8,12,56,600,7,1,1,0,0,0,1,lunch,11,7
+Steak,6,500,30,40,2,600,0,0,0,1,0,0,1,dinner,11,9
+Grilled Salmon,5,350,18,35,2,500,0,0,0,1,0,0,1,dinner,11,9
+Veggie Lasagna,5,320,10,15,42,550,6,1,0,0,0,1,1,dinner,11,7
+Chicken Stir-Fry,5,300,10,26,30,700,4,0,0,0,0,0,1,dinner,11,6
+Yogurt Parfait,4,200,2,10,30,80,20,1,0,1,0,1,1,afternoon snack,11,8
+Protein Shake,4,220,3,25,26,140,5,1,0,1,0,1,1,afternoon snack,11,8
+Granola Bar,2,180,6,4,25,150,9,1,0,0,0,0,1,afternoon snack,11,9
+Apple,1,95,0,0,25,2,19,1,1,1,0,0,1,afternoon snack,11,7
+Scrambled Eggs,4,180,12,12,2,150,1,1,0,1,0,0,1,breakfast,12,8
+Pancakes,4,220,7,6,36,350,6,1,0,0,0,1,1,breakfast,12,9
+Turkey Bacon,2,120,9,9,1,320,0,0,0,1,0,0,1,breakfast,12,6
+Fruit Salad,4,80,0,1,20,10,15,1,1,1,0,0,1,breakfast,12,7
+Grilled Chicken Sandwich,6,450,15,32,40,900,6,0,0,0,0,0,1,lunch,12,7
+Veggie Burger,6,320,10,18,38,600,5,1,1,0,0,0,1,lunch,12,8
+Caesar Salad,4,200,14,7,10,400,2,0,0,0,0,1,1,lunch,12,9
+Pasta Marinara,6,350,8,12,56,600,7,1,1,0,0,0,1,lunch,12,10
+Steak,6,500,30,40,2,600,0,0,0,1,0,0,1,dinner,12,7
+Grilled Salmon,5,350,18,35,2,500,0,0,0,1,0,0,1,dinner,12,8
+Veggie Lasagna,5,320,10,15,42,550,6,1,0,0,0,1,1,dinner,12,7
+Chicken Stir-Fry,5,300,10,26,30,700,4,0,0,0,0,0,1,dinner,12,8
+Yogurt Parfait,4,200,2,10,30,80,20,1,0,1,0,1,1,afternoon snack,12,6
+Protein Shake,4,220,3,25,26,140,5,1,0,1,0,1,1,afternoon snack,12,7
+Granola Bar,2,180,6,4,25,150,9,1,0,0,0,0,1,afternoon snack,12,9
+Apple,1,95,0,0,25,2,19,1,1,1,0,0,1,afternoon snack,12,8
+Scrambled Eggs,4,180,12,12,2,150,1,1,0,1,0,0,1,breakfast,13,6
+Pancakes,4,220,7,6,36,350,6,1,0,0,0,1,1,breakfast,13,8
+Turkey Bacon,2,120,9,9,1,320,0,0,0,1,0,0,1,breakfast,13,10
+Fruit Salad,4,80,0,1,20,10,15,1,1,1,0,0,1,breakfast,13,8
+Grilled Chicken Sandwich,6,450,15,32,40,900,6,0,0,0,0,0,1,lunch,13,9
+Veggie Burger,6,320,10,18,38,600,5,1,1,0,0,0,1,lunch,13,8
+Caesar Salad,4,200,14,7,10,400,2,0,0,0,0,1,1,lunch,13,8
+Pasta Marinara,6,350,8,12,56,600,7,1,1,0,0,0,1,lunch,13,6
+Steak,6,500,30,40,2,600,0,0,0,1,0,0,1,dinner,13,7
+Grilled Salmon,5,350,18,35,2,500,0,0,0,1,0,0,1,dinner,13,9
+Veggie Lasagna,5,320,10,15,42,550,6,1,0,0,0,1,1,dinner,13,8
+Chicken Stir-Fry,5,300,10,26,30,700,4,0,0,0,0,0,1,dinner,13,7
+Yogurt Parfait,4,200,2,10,30,80,20,1,0,1,0,1,1,afternoon snack,13,9
+Protein Shake,4,220,3,25,26,140,5,1,0,1,0,1,1,afternoon snack,13,7
+Granola Bar,2,180,6,4,25,150,9,1,0,0,0,0,1,afternoon snack,13,8
+Apple,1,95,0,0,25,2,19,1,1,1,0,0,1,afternoon snack,13,10
+Scrambled Eggs,4,180,12,12,2,150,1,1,0,1,0,0,1,breakfast,14,7
+Pancakes,4,220,7,6,36,350,6,1,0,0,0,1,1,breakfast,14,9
+Turkey Bacon,2,120,9,9,1,320,0,0,0,1,0,0,1,breakfast,14,6
+Fruit Salad,4,80,0,1,20,10,15,1,1,1,0,0,1,breakfast,14,9
+Grilled Chicken Sandwich,6,450,15,32,40,900,6,0,0,0,0,0,1,lunch,14,8
+Veggie Burger,6,320,10,18,38,600,5,1,1,0,0,0,1,lunch,14,8
+Caesar Salad,4,200,14,7,10,400,2,0,0,0,0,1,1,lunch,14,10
+Pasta Marinara,6,350,8,12,56,600,7,1,1,0,0,0,1,lunch,14,6
+Steak,6,500,30,40,2,600,0,0,0,1,0,0,1,dinner,14,8
+Grilled Salmon,5,350,18,35,2,500,0,0,0,1,0,0,1,dinner,14,9
+Veggie Lasagna,5,320,10,15,42,550,6,1,0,0,0,1,1,dinner,14,6
+Chicken Stir-Fry,5,300,10,26,30,700,4,0,0,0,0,0,1,dinner,14,8
+Yogurt Parfait,4,200,2,10,30,80,20,1,0,1,0,1,1,afternoon snack,14,8
+Protein Shake,4,220,3,25,26,140,5,1,0,1,0,1,1,afternoon snack,14,9
+Granola Bar,2,180,6,4,25,150,9,1,0,0,0,0,1,afternoon snack,14,9
+Apple,1,95,0,0,25,2,19,1,1,1,0,0,1,afternoon snack,14,7
+Scrambled Eggs,4,180,12,12,2,150,1,1,0,1,0,0,1,breakfast,15,9
+Pancakes,4,220,7,6,36,350,6,1,0,0,0,1,1,breakfast,15,7
+Turkey Bacon,2,120,9,9,1,320,0,0,0,1,0,0,1,breakfast,15,10
+Fruit Salad,4,80,0,1,20,10,15,1,1,1,0,0,1,breakfast,15,6
+Grilled Chicken Sandwich,6,450,15,32,40,900,6,0,0,0,0,0,1,lunch,15,8
+Veggie Burger,6,320,10,18,38,600,5,1,1,0,0,0,1,lunch,15,7
+Caesar Salad,4,200,14,7,10,400,2,0,0,0,0,1,1,lunch,15,7
+Pasta Marinara,6,350,8,12,56,600,7,1,1,0,0,0,1,lunch,15,9
+Steak,6,500,30,40,2,600,0,0,0,1,0,0,1,dinner,15,7
+Grilled Salmon,5,350,18,35,2,500,0,0,0,1,0,0,1,dinner,15,9
+Veggie Lasagna,5,320,10,15,42,550,6,1,0,0,0,1,1,dinner,15,6
+Chicken Stir-Fry,5,300,10,26,30,700,4,0,0,0,0,0,1,dinner,15,8
+Yogurt Parfait,4,200,2,10,30,80,20,1,0,1,0,1,1,afternoon snack,15,10
+Protein Shake,4,220,3,25,26,140,5,1,0,1,0,1,1,afternoon snack,15,8
+Granola Bar,2,180,6,4,25,150,9,1,0,0,0,0,1,afternoon snack,15,6
+Apple,1,95,0,0,25,2,19,1,1,1,0,0,1,afternoon snack,15,7
+Scrambled Eggs,4,180,12,12,2,150,1,1,0,1,0,0,1,breakfast,16,8
+Pancakes,4,220,7,6,36,350,6,1,0,0,0,1,1,breakfast,16,7
+Turkey Bacon,2,120,9,9,1,320,0,0,0,1,0,0,1,breakfast,16,9
+Fruit Salad,4,80,0,1,20,10,15,1,1,1,0,0,1,breakfast,16,9
+Grilled Chicken Sandwich,6,450,15,32,40,900,6,0,0,0,0,0,1,lunch,16,8
+Veggie Burger,6,320,10,18,38,600,5,1,1,0,0,0,1,lunch,16,7
+Caesar Salad,4,200,14,7,10,400,2,0,0,0,0,1,1,lunch,16,9
+Pasta Marinara,6,350,8,12,56,600,7,1,1,0,0,0,1,lunch,16,6
+Steak,6,500,30,40,2,600,0,0,0,1,0,0,1,dinner,16,7
+Grilled Salmon,5,350,18,35,2,500,0,0,0,1,0,0,1,dinner,16,8
+Veggie Lasagna,5,320,10,15,42,550,6,1,0,0,0,1,1,dinner,16,9
+Chicken Stir-Fry,5,300,10,26,30,700,4,0,0,0,0,0,1,dinner,16,7
+Yogurt Parfait,4,200,2,10,30,80,20,1,0,1,0,1,1,afternoon snack,16,9
+Protein Shake,4,220,3,25,26,140,5,1,0,1,0,1,1,afternoon snack,16,8
+Granola Bar,2,180,6,4,25,150,9,1,0,0,0,0,1,afternoon snack,16,7
+Apple,1,95,0,0,25,2,19,1,1,1,0,0,1,afternoon snack,16,7
+Scrambled Eggs,4,180,12,12,2,150,1,1,0,1,0,0,1,breakfast,17,7
+Pancakes,4,220,7,6,36,350,6,1,0,0,0,1,1,breakfast,17,8
+Turkey Bacon,2,120,9,9,1,320,0,0,0,1,0,0,1,breakfast,17,9
+Fruit Salad,4,80,0,1,20,10,15,1,1,1,0,0,1,breakfast,17,8
+Grilled Chicken Sandwich,6,450,15,32,40,900,6,0,0,0,0,0,1,lunch,17,8
+Veggie Burger,6,320,10,18,38,600,5,1,1,0,0,0,1,lunch,17,7
+Caesar Salad,4,200,14,7,10,400,2,0,0,0,0,1,1,lunch,17,8
+Pasta Marinara,6,350,8,12,56,600,7,1,1,0,0,0,1,lunch,17,9
+Steak,6,500,30,40,2,600,0,0,0,1,0,0,1,dinner,17,7
+Grilled Salmon,5,350,18,35,2,500,0,0,0,1,0,0,1,dinner,17,9
+Veggie Lasagna,5,320,10,15,42,550,6,1,0,0,0,1,1,dinner,17,6
+Chicken Stir-Fry,5,300,10,26,30,700,4,0,0,0,0,0,1,dinner,17,8
+Yogurt Parfait,4,200,2,10,30,80,20,1,0,1,0,1,1,afternoon snack,17,8
+Protein Shake,4,220,3,25,26,140,5,1,0,1,0,1,1,afternoon snack,17,9
+Granola Bar,2,180,6,4,25,150,9,1,0,0,0,0,1,afternoon snack,17,7
+Apple,1,95,0,0,25,2,19,1,1,1,0,0,1,afternoon snack,17,9
+Scrambled Eggs,4,180,12,12,2,150,1,1,0,1,0,0,1,breakfast,18,9
+Pancakes,4,220,7,6,36,350,6,1,0,0,0,1,1,breakfast,18,7
+Turkey Bacon,2,120,9,9,1,320,0,0,0,1,0,0,1,breakfast,18,8
+Fruit Salad,4,80,0,1,20,10,15,1,1,1,0,0,1,breakfast,18,9
+Grilled Chicken Sandwich,6,450,15,32,40,900,6,0,0,0,0,0,1,lunch,18,7
+Veggie Burger,6,320,10,18,38,600,5,1,1,0,0,0,1,lunch,18,8
+Caesar Salad,4,200,14,7,10,400,2,0,0,0,0,1,1,lunch,18,7
+Pasta Marinara,6,350,8,12,56,600,7,1,1,0,0,0,1,lunch,18,8
+Steak,6,500,30,40,2,600,0,0,0,1,0,0,1,dinner,18,10
+Grilled Salmon,5,350,18,35,2,500,0,0,0,1,0,0,1,dinner,18,6
+Veggie Lasagna,5,320,10,15,42,550,6,1,0,0,0,1,1,dinner,18,7
+Chicken Stir-Fry,5,300,10,26,30,700,4,0,0,0,0,0,1,dinner,18,9
+Yogurt Parfait,4,200,2,10,30,80,20,1,0,1,0,1,1,afternoon snack,18,6
+Protein Shake,4,220,3,25,26,140,5,1,0,1,0,1,1,afternoon snack,18,7
+Granola Bar,2,180,6,4,25,150,9,1,0,0,0,0,1,afternoon snack,18,9
+Apple,1,95,0,0,25,2,19,1,1,1,0,0,1,afternoon snack,18,8
+Scrambled Eggs,4,180,12,12,2,150,1,1,0,1,0,0,1,breakfast,19,10
+Pancakes,4,220,7,6,36,350,6,1,0,0,0,1,1,breakfast,19,7
+Turkey Bacon,2,120,9,9,1,320,0,0,0,1,0,0,1,breakfast,19,8
+Fruit Salad,4,80,0,1,20,10,15,1,1,1,0,0,1,breakfast,19,9
+Grilled Chicken Sandwich,6,450,15,32,40,900,6,0,0,0,0,0,1,lunch,19,9
+Veggie Burger,6,320,10,18,38,600,5,1,1,0,0,0,1,lunch,19,8
+Caesar Salad,4,200,14,7,10,400,2,0,0,0,0,1,1,lunch,19,9
+Pasta Marinara,6,350,8,12,56,600,7,1,1,0,0,0,1,lunch,19,7
+Steak,6,500,30,40,2,600,0,0,0,1,0,0,1,dinner,19,6
+Grilled Salmon,5,350,18,35,2,500,0,0,0,1,0,0,1,dinner,19,8
+Veggie Lasagna,5,320,10,15,42,550,6,1,0,0,0,1,1,dinner,19,9
+Chicken Stir-Fry,5,300,10,26,30,700,4,0,0,0,0,0,1,dinner,19,7
+Yogurt Parfait,4,200,2,10,30,80,20,1,0,1,0,1,1,afternoon snack,19,8
+Protein Shake,4,220,3,25,26,140,5,1,0,1,0,1,1,afternoon snack,19,9
+Granola Bar,2,180,6,4,25,150,9,1,0,0,0,0,1,afternoon snack,19,8
+Apple,1,95,0,0,25,2,19,1,1,1,0,0,1,afternoon snack,19,7
+Scrambled Eggs,4,180,12,12,2,150,1,1,0,1,0,0,1,breakfast,20,7
+Pancakes,4,220,7,6,36,350,6,1,0,0,0,1,1,breakfast,20,8
+Turkey Bacon,2,120,9,9,1,320,0,0,0,1,0,0,1,breakfast,20,6
+Fruit Salad,4,80,0,1,20,10,15,1,1,1,0,0,1,breakfast,20,9
+Grilled Chicken Sandwich,6,450,15,32,40,900,6,0,0,0,0,0,1,lunch,20,6
+Veggie Burger,6,320,10,18,38,600,5,1,1,0,0,0,1,lunch,20,9
+Caesar Salad,4,200,14,7,10,400,2,0,0,0,0,1,1,lunch,20,6
+Pasta Marinara,6,350,8,12,56,600,7,1,1,0,0,0,1,lunch,20,7
+Steak,6,500,30,40,2,600,0,0,0,1,0,0,1,dinner,20,9
+Grilled Salmon,5,350,18,35,2,500,0,0,0,1,0,0,1,dinner,20,8
+Veggie Lasagna,5,320,10,15,42,550,6,1,0,0,0,1,1,dinner,20,7
+Chicken Stir-Fry,5,300,10,26,30,700,4,0,0,0,0,0,1,dinner,20,9
+Yogurt Parfait,4,200,2,10,30,80,20,1,0,1,0,1,1,afternoon snack,20,9
+Protein Shake,4,220,3,25,26,140,5,1,0,1,0,1,1,afternoon snack,20,7
+Granola Bar,2,180,6,4,25,150,9,1,0,0,0,0,1,afternoon snack,20,6
+Apple,1,95,0,0,25,2,19,1,1,1,0,0,1,afternoon snack,20,9
