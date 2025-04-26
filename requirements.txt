@@ -17,3 +17,6 @@ regex>=2021.8.3
 pandas>=1.5.3
 scikit-learn>=1.2.2
 numpy>=1.20.0
+
+# Scraping
+selenium
