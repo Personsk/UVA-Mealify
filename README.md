@@ -92,6 +92,12 @@ python main.py --train
 
 # Step 3: Recommend today's meals
 python main.py --recommend
+
+# Pure NLP Predict
+python main.py --nlp_predict
+
+# Pure Naive Bayes Net Predict
+python main.py --bayesnet_predict
 ```
 
 Sample output:
